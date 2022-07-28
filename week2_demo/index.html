@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Giana Hardin">
+    <meta name="description" content="W2D2 Demo">
+    <title>W2D2 | Demo</title><!--tab name in browser-->
+
+    <style>
+
+        /*we are now writing in CSS*
+        /*CSS SYNTAX
+
+            selector {
+                property: value;
+                property: value;
+            }
+
+            */
+
+            /*Selector options: TAG TYPE (), ID (), CLASS () */
+
+            body {/*applies to body elemnt (inclding content!)*/
+                background-color:lightslategray;
+            }
+
+            h2 {
+                font-family:helvetica, sans-serif;
+            }
+
+            div {
+                border:1px solid black;
+                margin:20px; /*adds space between element and neighboring elements (top, right, bottom, left) */
+                background-color:gray;
+            }
+
+            #characters {
+                border:5px solid green;
+            }
+
+    </style>
+
+</head>
+<body>
+    <!--this is where content goes-->
+    <h1>Giana Hardin</h1>
+    <hr>
+    
+    <div id="characters">
+        <h2>Favorite Characters</h2>
+
+        <ol>
+            <li>Drogon!</li>
+            <li>Jaime Lannister</li>
+            <li>Daenerys Targaryen</li>
+            <li>Ghosts</li>
+        </ol>
+    </div>
+
+    <div id="tv-shows">
+        <h2>Favorite Shows</h2>
+
+        <ul>
+            <li>Game of Thrones</li>
+            <li>Westworld</li>
+            <li>Murder, She Wrote</li>
+            <li>Star Trek: Next Generation</li>
+        </ul>
+
+        <!--relative path for image below (lives in te root where index.html is)-->
+        <img src="C:/Users/008018155/Desktop/SE111_202240/W2D2/images/stormsEnd.jpg" alt="Storm's End springtime illustration - castle by the sea" width="250px">
+    </div>
+
+    <hr>
+
+    <p>Hi! I am <em>Giana</em>. I <i>love</i> music of all sorts!</p>
+
+    <!--absolute path for image below (full URL w/ protocol! not my image, someone else's)-->
+    <img src="https://d.newsweek.com/en/full/648050/drogon-spoils-war.webp?w=737&f=a1e8ba2f1d2277f882768ff371aa8022" alt="spicy boi Drogon the Dragon" width="250px">
+
+
+    <!--links - external = outside of our domain, internal = in our root folder, in-page = jumping to a section in the current html page-->
+    <a href="https://www.youtube.com/watch?v=DotnJ7tTA34" target="_blank">House of the Dragon Trailer</a>
+
+</body>
+</html>
+
