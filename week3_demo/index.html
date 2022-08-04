@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Giana Hardin">
+    <meta name="description" content="W3 Demo">
+    <title>W3 | Demo</title>
+
+
+    <!--IN DOCUMENT STYLING-->
+    <style>
+        /*in here we write CSS*/
+
+        /*Basic CSS Set-up:
+
+            selector {
+                property:value;
+            }
+
+        VALID SELECTORS: tag type (body, h1, img), id names (#wrapper, #header, #footer), class names (.bg-main.img-special, .titles)
+
+        */
+
+        body {
+            background-color: slategray;
+        }
+
+        div {/*all divs on page*/
+            border:1px solid black;
+            margin:10px;/*space outside/between elements (top, right, bottom, left)*/
+            padding:10px;/*space inside element between border & content (top, right, bottom, left)*/
+        }
+
+        #footer {/*only applies to the element with an ID of 'footer'*/
+
+        text-align:center;
+        }
+
+        #wrapper {
+            width:900px;
+            margin:auto;/*center right and left sides*/
+            background-color:rgb(135, 154, 173);
+        }
+
+
+
+        .bg-main {
+            background-color: aliceblue;
+        }
+
+        a {
+            width:150px;
+            border:1px solid gray;
+            background-color: white;
+        }
+
+        a:hover {
+            background-color: blueviolet;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div id="wrapper"><!--holds all content on page-->
+
+        <!--HEADER------------------------------------------------------------------->
+        <div id="header" class="bg-main">
+
+            <h1>Giana Hardin - About Me</h1>
+
+
+        </div><!--/ #header-->
+
+        <!--NAVIGATION BAR - INTERNAL LINKS------------------------------------------>
+        <div id="nav">
+
+            <!--external link -> goes to page outside site-->
+            <a href="https://www.neit.edu/">Visit NEIT</a> 
+
+            <!--internal link -> page within the site-->
+            <a href="index.html">HOME/ABOUT [index}</a>
+            <a href="hobbies.html">HOBBIES</a>
+
+            <!--in-page jump links -> link to a section (ID!) within current page-->
+            <a href="#footer">go to bottom</a>
+
+
+
+
+        </div><!--/ #nav-->
+
+        <!--MAIN CONTENT ON PAGE - only thing that changes from page to page--------->
+        <div id="main-content">
+
+            <h2 id="about" class="bg-main">Title of Section/Page Goes Here</h2>
+            <p>content content content</p>
+
+            <h2 id="schools">Schools</h2>
+            <ol>
+                <li></li>
+            </ol>
+            <hr>
+            <h2 id="hobbies">Hobbies</h2>
+            <ul>
+                <li></li>
+            </ul>
+            
+
+
+
+        </div><!--/ #main-content-->
+
+
+
+        <!--FOOTER------------------------------------------------------------------->
+        <div id="footer" class="bg-main">
+
+            <p>&copy; 2022 | SE111.02 | MY NAME :]</p>
+            <br>
+            <a href="#header">back to top</a>
+
+
+        </div><!--/ #footer-->
+
+    
+    </div>
+
+
+</body>
+</html>
