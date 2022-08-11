@@ -9,46 +9,133 @@
     <title>W3 | Bio</title>
 
     <!--Giana Hardin; SE111_202240; 08/11/2022-->
+
+    <!--IN DOCUMENT STYLING-->
+    <style>
+        /*in here we write CSS*/
+
+        /*Basic CSS Set-up:
+
+            selector {
+                property:value;
+            }
+
+        VALID SELECTORS: tag type (body, h1, img), id names (#wrapper, #header, #footer), class names (.bg-main.img-special, .titles)
+
+        */
+
+        #wrapper {
+            text-align: center;
+            width:900px;
+            margin:auto;/*center right and left sides*/
+            background-color:hsl(0, 0%, 83%,.5);
+            border: 1px double black;
+            border-radius: 25px;
+            padding: 20px;
+            background-origin: content-box;
+        }
+
+        #header {
+            stop-opacity: 1;
+            text-align:center;
+            text-overflow: clip;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        body {
+            background-image: url("../w3-bio/images/sunrise2.JPG");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        div {/*all divs on page*/
+            border:2px solid darkslategrey;
+            border-style: double;
+            margin:10px;/*space outside/between elements (top, right, bottom, left)*/
+            padding:10px;/*space inside element between border & content (top, right, bottom, left)*/
+        }
+
+        #footer {/*only applies to the element with an ID of 'footer'*/
+        text-align:center;
+        font-size: large;
+        }
+
+
+        #nav {
+            text-align: center;
+            background-color: rgb(236, 130, 85, .5);
+        }
+
+        .bg-main {
+            background-color: hsl(0, 0%, 66%, .5);
+        }
+
+        a {
+            width:200px;
+        }
+
+        a:hover {
+            background-color: gray;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); 
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration-line: underline;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+        }
+
+
+    </style>
 </head>
+
+
 <body>
-    <div id="nav">
-        <!--four links within "nav"-->
-        <!--#bio id--><a href="#bio">Bio</a>
-        <!--#schooling id--><a href="#schooling">Schooling</a>
-        <!--#hobbies id--><a href="#hobbies">Hobbies</a>
-        <!--#footer--><a href="#footer">Footer</a>
-    </div>
-
-    <nav>
-        <!--link to the index and characters pages-->
-        <!--In addition, use a fragment to link to the footer of the Character's page-->
-        <a href="../w3-bio/index.html">HOME</a> | <a href="../w3-bio/schools.html">SCHOOLING</a> | <a href="../w3-bio/hobbies.html">HOBBIES</a>
-    </nav>
-    <hr>
-
-    <!--SCHOOLING---------------------------------------------------------->
-    <div id="schooling">
-        <h2>Schooling</h2>
-        <ol>
-            <li>New England Institute of Technology!</li>
-            <li>Navy Rating GSM A School</li>
-            <li>Woonsocket High School</li>
-        </ol>
-
-    <hr style="border: 1px solid gray">
-
-        <!--relative path for image below (lives in te root where index.html is)-->
+    <div id="wrapper"><!--holds all page content-->
         
+        <div id="nav">
+                
+            <!--link to the index and characters pages-->
+            <!--In addition, use a fragment to link to the footer of the Character's page-->
+            <a href="../w3-bio/index.html">HOME</a> | <a href="../w3-bio/schools.html">SCHOOLING</a> | <a href="../w3-bio/hobbies.html">HOBBIES</a>
+        <br>
+        </div>
+
+        <hr>
+
+        <!--SCHOOLING---------------------------------------------------------->
+        <div id="schooling">
+            <h2>Schooling</h2>
+            <ol>
+                <li>New England Institute of Technology!</li>
+                <li>Navy Rating GSM A School</li>
+                <li>Woonsocket High School</li>
+            </ol>
+
+        <hr style="border: 1px solid gray">
+
+            <!--relative path for image below (lives in te root where index.html is)-->
+            
+        </div>
+        <hr>
+            <!--FOOTER------------------------------------------------------------------->
+            <div id="footer" class="bg-main">
+
+                <p>&copy; 2022 | SE111.02 | Giana H 🤙</p>
+                <br>
+                <!--link to the header tag-->
+                <a href="#header">back to top</a>
+            </div><!--/ #footer-->
+            <br>
+
     </div>
-    <hr>
-    <!--FOOTER---------------------------------------------------------------------->
-<footer id="footer">
-    <!--link to footer picture-->
-    <img src="../w2-bio/images/moon_phases.jpg" alt="Moonphases footer" width="250px">
-    <br>
-    <!--link to the header tag-->
-    <a href="#header">Back to Top</a>
-    <br>
+
 
 
 </body>
