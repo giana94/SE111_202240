@@ -24,28 +24,18 @@
 
         */
 
-        #wrapper {
-            text-align: center;
-            width:900px;
-            margin:auto;/*center right and left sides*/
-            background-color:hsl(0, 0%, 83%,.5);
-            border: 1px double black;
-            border-radius: 25px;
-            padding: 20px;
-            background-origin: content-box;
-        }
-
-        #header {
-            text-align:center;
-            text-overflow: clip;
-            border-radius: 10px;
-            padding: 10px;
+        .parallax {
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         body {
-            background-image: url("../w3-bio/images/sunrise2.JPG");
+            background-image: url("../w3-bio/images/sunrise3.JPG");
             background-repeat: no-repeat;
-            background-size: 2000px 1050px;
+            background-size: 100% 100%;
         }
 
         div {/*all divs on page*/
@@ -55,48 +45,111 @@
             padding:10px;/*space inside element between border & content (top, right, bottom, left)*/
         }
 
-        #footer {/*only applies to the element with an ID of 'footer'*/
-        text-align:center;
-        font-size: large;
+        #wrapper {
+            text-align: left;
+            width:900px;
+            margin:auto;/*center right and left sides*/
+            background-color:hsl(0, 0%, 83%,.5);
+            border: 0ch;
+            border-radius: 25px;
+            padding: 20px;
+            background-origin: content-box;
+            box-shadow: hsl(0, 0%, 0%, .5) 2px 2px 4px 4px;
         }
 
+        #header {
+            text-align:center;
+            font-size: 30px;
+            font-family: "Helvetica";
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 10px;
+            padding: 10px;
+            border: 0ch;
+        }
 
         #nav {
             text-align: center;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: larger;
             background-color: rgb(236, 130, 85, .5);
+            border: 0ch;
+            border-radius: 25px;
+            box-shadow: gray 2px 2px 4px 4px;
+            padding: 20px;
         }
 
-        .bg-main {
-            background-color: hsl(0, 0%, 66%, .5);
+
+        #hobbies {
+            border: 0ch;
+            border-radius: 25px;
+            padding: 20px;
+            font-size: x-large;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
+
+        #hobbies-list {
+            border: 1px double rgb(236, 130, 85, .5);
+            border-radius: 25px;
+            font-size: x-large;
+            padding: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: hsl(0, 0%, 0%, .2) 2px 2px 4px 4px;
+        }
+        
+        img {
+            border-radius: 8px;
+            box-shadow: gray 2px 2px 4px 4px;
+            }
 
         a {
-            width:200px;
+            width: 150px;
+            text-align: center
         }
 
         a:hover {
             background-color: gray;
             box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); 
             border: none;
+            border-radius: 25px;
             color: white;
-            padding: 15px 32px;
+            padding: 7px 14px;
             text-align: center;
             text-decoration-line: underline;
             display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
+            font-size: 20px;
+            margin: 2px 4px;
             cursor: pointer;
             -webkit-transition-duration: 0.4s;
             transition-duration: 0.4s;
         }
 
+        #footer {/*only applies to the element with an ID of 'footer'*/
+        text-align:center;
+        font-size: larger;
+        border: 0ch;
+        border-radius: 25px;
+        padding: 20px;
+        }
 
     </style>
 
 </head>
-<body>
+
+
+<!--this is where content goes-->
+<body class="parallax">
 
     <div id="wrapper"><!--holds all page content-->
+
+        <div id="header">
+            <h1>Giana Hardin</h1>
+
+        </div><!--#header-->
+
 
         <div id="nav">
             
@@ -104,25 +157,31 @@
             <!--In addition, use a fragment to link to the footer of the Character's page-->
             <a href="../w3-bio/index.html">HOME</a> | <a href="../w3-bio/schools.html">SCHOOLING</a> | <a href="../w3-bio/hobbies.html">HOBBIES</a>
         <br>
-        </div>
+        </div><!--/ #nav-->
 
 
-        <hr>
 
         <!--HOBBIES---------------------------------------------------------->
-        <div id="hobbies">
-            <h2>Hobbies</h2>
-            <ul>
+        <div style="text-align:center"id="hobbies">
+            <h2 style="text-align:center">Hobbies</h2>
+        </div><!--bobbies-->
+
+        <div id="hobbies-list">
+            <ul style="text-align:left" style="width:350px">
                 <li>Traveling</li>
                 <li>Learning new skills</li>
                 <li>Listening to music / Dancing</li>
             </ul>
-        
-        </div>
-        <hr>
-            <!--FOOTER------------------------------------------------------------------->
-            <div id="footer" class="bg-main">
+            <img style="text-align: center" src="images/Arches_national_park.JPG" alt="Arches National Park" width="850px">
+        </div><!--/ #hobbies-list-->
 
+            <br>
+
+
+            <hr>
+            <!--FOOTER------------------------------------------------------------------->
+            <div id="footer"><!--class="bg-main"-->
+                
                 <p>&copy; 2022 | SE111.02 | Giana H 🤙</p>
                 <br>
                 <!--link to the header tag-->
@@ -130,10 +189,7 @@
             </div><!--/ #footer-->
 
             <br>
-
     </div>
-
-
 
 
 </body>

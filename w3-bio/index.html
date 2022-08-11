@@ -21,32 +21,15 @@
             }
 
         VALID SELECTORS: tag type (body, h1, img), id names (#wrapper, #header, #footer), class names (.bg-main.img-special, .titles)
-
         */
 
-        #wrapper {
-            text-align: left;
-            width:900px;
-            margin:auto;/*center right and left sides*/
-            background-color:hsl(0, 0%, 83%,.5);
-            border: 1px double black;
-            border-radius: 25px;
-            padding: 20px;
-            background-origin: content-box;
-        }
 
-        #header {
-            text-align:center;
-            text-overflow: clip;
-            border-radius: 10px;
-            padding: 10px;
-        }
-
-        #bio {
-            text-align: justify;
-
-
-
+        .parallax {
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         body {
@@ -62,41 +45,99 @@
             padding:10px;/*space inside element between border & content (top, right, bottom, left)*/
         }
 
-        #footer {/*only applies to the element with an ID of 'footer'*/
-        text-align:center;
-        font-size: large;
+        #wrapper {
+            text-align: left;
+            width:900px;
+            margin:auto;/*center right and left sides*/
+            background-color:hsl(0, 0%, 83%,.5);
+            border: 0ch;
+            border-radius: 25px;
+            padding: 20px;
+            background-origin: content-box;
+            box-shadow: hsl(0, 0%, 0%, .5) 2px 2px 4px 4px;
         }
 
+        #header {
+            text-align:center;
+            font-size: 30px;
+            font-family: "Helvetica";
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 10px;
+            padding: 10px;
+            border: 0ch;
+        }
 
         #nav {
             text-align: center;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: larger;
             background-color: rgb(236, 130, 85, .5);
+            border: 0ch;
+            border-radius: 25px;
+            box-shadow: gray 2px 2px 4px 4px;
+            padding: 20px;
         }
 
-        .bg-main {
-            background-color: hsl(0, 0%, 66%, .5);
+        #about-me {
+            border: 0ch;
+            border-radius: 25px;
+            padding: 20px;
+            font-size: x-large;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        #bio {
+            border: 1px double rgb(236, 130, 85, .5);
+            border-radius: 25px;
+            padding: 15px;
+            font-size: 20px;
+            font-family: "georgia";
+            box-shadow: hsl(0, 0%, 0%, .2) 2px 2px 4px 4px;
+        }
+
+        img {
+        border-radius: 8px;
+        box-shadow: gray 2px 2px 4px 4px;
         }
 
         a {
-            width:200px;
+            width: 150px;
+            text-align: center
         }
 
         a:hover {
             background-color: gray;
             box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); 
             border: none;
+            border-radius: 25px;
             color: white;
-            padding: 15px 32px;
+            padding: 7px 14px;
             text-align: center;
             text-decoration-line: underline;
             display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
+            font-size: 20px;
+            margin: 2px 4px;
             cursor: pointer;
             -webkit-transition-duration: 0.4s;
             transition-duration: 0.4s;
         }
 
+        #clear {
+            text-align:center;
+            border:0ch;
+            font-size: larger;
+        }
+
+        #footer {/*only applies to the element with an ID of 'footer'*/
+        text-align:center;
+        font-size: larger;
+        border: 0ch;
+        border-radius: 25px;
+        padding: 20px;
+        }
 
     </style>
 
@@ -104,11 +145,11 @@
 
 
 <!--this is where content goes-->
-<body>
+<body class="parallax">
 
     <div id="wrapper"><!--holds all page content-->
 
-        <div id="header" class="bg-main">
+        <div id="header">
             <h1>Giana Hardin</h1>
 
         </div><!--#header-->
@@ -120,25 +161,37 @@
             <!--In addition, use a fragment to link to the footer of the Character's page-->
             <a href="../w3-bio/index.html">HOME</a> | <a href="../w3-bio/schools.html">SCHOOLING</a> | <a href="../w3-bio/hobbies.html">HOBBIES</a>
         <br>
-        </div>
+        </div><!--/ #nav-->
 
 
 
         <!--BIO / ABOUT ME--------------------------------------------------------->
-        <div style="text-align:center"id="bio">
+        <div style="text-align:center"id="about-me">
             <h2 style="text-align:center">About Me</h2>
-            <p style="text-align: left;">Hello! Welcome to my first webpage! Here is a little about myself! I am from Woonsocket, RI. I am in my second semester at NEIT in the Software Engineering program. My <b>favorite</b> thing to do is <em>travel</em> the world! I have a bucket list to watch the sunrise in every state. My <i>main</i> goal is to finish school and continue my travels exploring the world. In the meantime, I <strong>love</strong> learning new things and using my <u>creativity</u> to indulge in some sort of arts.</p>
-            <img src="../w2-bio/images/utah sunset 2020.jpg" alt="Random picture of me lol" width="350px">
+        </div><!--/#about-me-->
+
+        
+        <div id="bio">
+            
+                <p style="float: right; width:350px">Hello! Welcome to my first webpage! Here is a little about myself! My name is Giana, I am from Woonsocket, RI. I have traveled to many places which include 19 different countires. My <strong>favorite</strong> was Greece! I try to view the world with <i>iridescent</i> lenses: seeing the <u>beauty</u> in everything. I use my innovative mind to create art such as designing and a bit of modeling. I am an introvert at times but, I am connected to many people through my <b>Navy</b> experiences. I also love <em>comedy</em>. I'm just here for a good time and some good laughs!</p>
+                <img style="float: left" src="../w2-bio/images/utah sunset 2020.jpg" alt="Random picture of me lol" width="350px">
+            
             <br>
-            <a href="https://www.instagram.com/gianaahardin/"target="_blank">IG Account</a>
+            <div id="clear" style="clear:both">
+                <a href="https://www.instagram.com/gianaahardin/"target="_blank">IG Account</a>
+            </div>
+        </div><!--/ #bio-->
+
+        <br>
             
             
-        </div>
+        
+
 
         <hr>
             <!--FOOTER------------------------------------------------------------------->
-            <div id="footer" class="bg-main">
-
+            <div id="footer"><!--class="bg-main"-->
+                
                 <p>&copy; 2022 | SE111.02 | Giana H 🤙</p>
                 <br>
                 <!--link to the header tag-->
@@ -146,6 +199,7 @@
             </div><!--/ #footer-->
 
             <br>
+
 
     </div>
 </body>
