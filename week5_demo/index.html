@@ -29,9 +29,6 @@
         <label for ="age">Age:</label>
         <input type="text" name="age" id="age">
 
-
-
-
     </form>
 
 <hr>
@@ -39,11 +36,26 @@
 
     <h2>Form using a Table</h2>
 
-    <form>
+    <form method="GET" action="confirm.html"><!--needed for table-->
 
         <table>
+            
+            <thead><!--table head- column headers for each table data-->
+
+                <tr><!--table row-->
+
+                    <td><!--table data-->
+                        <h2>Question</h2>
+                    </td>
+
+                    <td>
+                        <h2>Answer</h2>
+                    </td>
+            </thead>
 
             <tbody>
+                </tr>
+                
 
                 <!--Table Row-->
                 <tr>
@@ -89,6 +101,120 @@
                     </td>
 
                 </tr>
+
+                <!--Table Row-->
+                <tr>
+
+                    <!--first column- LABEL-->
+                    <td>
+                        <label for="email">Email:</label>
+                    </td>
+
+                    <!--second column- INPUT-->
+                    <td>
+                        <input type="text" id="email" name="email" maxlength="50" placeholder="email@email.com">
+                    </td>
+
+                </tr>
+
+                <!--Table Row-->
+                <tr>
+
+                    <!--first column- LABEL-->
+                    <td>
+                        <label for="comments">Comments:</label>
+                    </td>
+
+                    <!--second column- INPUT-->
+                    <td>
+                        <textarea name="comments" id="comments" rows="10" cols="20" placeholder="Enter your comment here..."></textarea>
+                    </td>
+
+                </tr>
+
+
+            <!--non text input elements-->
+            <!--select element creates a drop down menu-->
+
+                <tr>
+                    
+                    <td>
+                        <label for="FaveColor">Pick Your Favorite Color: </label>
+                    </td>
+
+                    <td>
+                        <select name="faveColor">
+
+                            <option value="red">Red</option>
+                            <option value="orange">Orange</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="green">Green</option>
+                            <option value="blue">Blue</option>
+                            <option value="indigo">Indigo</option>
+                            <option value="violet">Violet</option>
+
+                        </select>
+                    </td>
+
+                </tr>
+
+                <!--radio buttons: 'multiple choice' options, small circular buttons; can only ever choose ONE out of the set-->
+                
+                <tr>
+                    <td>
+                        <label for="study">Program of Study:</label>
+                    </td>
+
+                    <td>
+                        <input type="radio" name="study" value="SE">Software Engineering <br>
+
+                        <input type="radio" name="study" value="CYB">Cybersecrity <br>
+
+                        <input type="radio" name="study" value="WD">Web Development <br>
+                    </td>
+                </tr>
+
+                <!--checkboxes allow for multiple responses-->
+                <tr>
+                    <td>
+                        <label for="vehicle">Select Your Vehicles</label>
+                    </td>
+
+                    <td>
+                        <input type="checkbox" name="vehicle1" value="car">Car <br>
+                        <input type="checkbox" name="vehicle2" value="car">The Rocinante <br>
+                        <input type="checkbox" name="vehicle3" value="car">Motorcycle <br>
+                        <input type="checkbox" name="vehicle4" value="car">Bicycle <br>
+                        <input type="checkbox" name="vehicle5" value="car">Dragon <br>
+                        <input type="checkbox" name="vehicle6" value="car">Horse <br>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="date">Date: </label>
+                    </td>
+
+                    <td>
+                        <input type="date" name="date">
+                    </td>
+                </tr>
+
+                <!--submit button! must have for functionality!-->
+
+                <tr>
+                    <td>
+                            <!--keep this blank; every table row should have the same amount of table data. (each have two here) added another so that it will be even but only want one value of submit button -->
+                    </td>
+
+                    <td>
+                        <input type="submit" value="SUBMIT :D">
+                    </td>
+                </tr>
+
+
+                <!-- ?fName=giana&lName=hardin&age=28&email=giana.hardin%40gmail.com&comments=hellooooooo%21%21%21&faveColor=violet&study=SE&vehicle1=car&vehicle3=car&vehicle5=car&date=2022-08-18  -->
+
 
             </tbody>
 
