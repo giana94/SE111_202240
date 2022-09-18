@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Giana Hardin">
+    <meta name="description" content="Week 9 Creating Elements">
+	<title>Week 9 | Creating Elements</title>
+		
+
+	<style type="text/css">
+
+		.border {
+
+		border:1px solid black;
+		
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<h1>Week 9 - Creating Elements</h1>
+
+	<script type="text/javascript">
+		//Use this Array of objects to complete the assignment.
+		var people =[
+
+			{
+				first:"Jason", 
+				last:"Vorhees", 
+				credit:"Friday the 13th"
+			},
+
+			{
+				first:"Freddy", 
+				last:"Krueger", 
+				credit:"A Nightmare on Elm Street" 
+			},
+
+			{
+				first:"Roger", 
+				last:"Rabbit", 
+				credit:"Who Framed Roger Rabbit" 
+			},
+
+			{
+				first:"Kevin", 
+				last:"McCallister", 
+				credit:"Home Alone" 
+			},
+
+			{
+				first:"Godzilla", 
+				last:"King of The Monsters", 
+				credit:"Godzilla" 
+			},
+
+			{
+				first:"Buzz", 
+				last:"Lightyear", 
+				credit:"Toy Story" 
+			},
+
+			{
+				first:"Marion", 
+				last:"Cobretti", 
+				credit:"Cobra" 
+			}
+
+		]
+
+		var body = document.querySelector(`body`)
+
+		console.log(body)
+		console.dir(body)
+
+		for(let i = 0; i < people.length; i++)
+		{
+			var tempDiv = document.createElement(`div`)
+			tempDiv.setAttribute(`id`, i)
+			tempDiv.setAttribute(`class`, `border`)
+
+			console.log(tempDiv)
+
+			for(key in people[i])
+			{
+				var p = document.createElement(`p`)
+				var text = document.createTextNode(people[i] [key])
+
+				p.append(text)
+				tempDiv.appendChild(p)
+				
+			}
+
+			body.appendChild(tempDiv)
+		}
+	</script>
+</body>
+</html>
